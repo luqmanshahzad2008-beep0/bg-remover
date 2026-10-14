@@ -19,7 +19,17 @@ export async function processBackgroundRemoval(
     }
 
     const origin = typeof window !== 'undefined' ? window.location.origin : '';
-    const publicPath = `${origin}/api/imgly/`;
+    let publicPath = 'https://staticimgly.com/@imgly/background-removal-data/1.7.0/dist/';
+    if (origin) {
+      try {
+        const localCheck = await fetch(`${origin}/api/imgly/resources.json`, { method: 'HEAD' });
+        if (localCheck.ok) {
+          publicPath = `${origin}/api/imgly/`;
+        }
+      } catch {
+        // Fallback to CDN for static environments like Cloudflare Pages
+      }
+    }
 
     const blobResult = await removeBackground(fileOrUrl, {
       publicPath,

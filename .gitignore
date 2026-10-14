@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+.cache/
+bun.lock
+bun.lockb
+.wrangler/
