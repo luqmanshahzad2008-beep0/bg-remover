@@ -1,0 +1,6 @@
+{
+  "name": "BG Remover",
+  "description": "Remove image backgrounds for free in your browser with real on-device AI. Download clean transparent PNGs with full alpha channel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

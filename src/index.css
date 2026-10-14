@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .checkerboard-pattern {
+    background-color: #ffffff;
+    background-image: repeating-conic-gradient(#e2e8f0 0% 25%, #ffffff 0% 50%);
+    background-size: 20px 20px;
+  }
+  .checkerboard-dark {
+    background-color: #0f172a;
+    background-image: repeating-conic-gradient(#1e293b 0% 25%, #0f172a 0% 50%);
+    background-size: 20px 20px;
+  }
+}
